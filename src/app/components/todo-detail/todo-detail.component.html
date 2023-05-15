@@ -1,0 +1,7 @@
+<!-- TODO DETAIL -->
+<li class=" priority{{todoDetail?.priority}}"> <!-- oppure usare un ngIf | class == priority+1/2/3  -->
+  <h3>{{todoDetail?.title}}</h3>
+  <span>{{todoDetail?.description}}</span>
+  <br><button (click)="deleteTodo()">Delete</button>
+  <!-- <span>{{todoDetail?.priority}}</span> -->
+</li>
