@@ -29,4 +29,10 @@ export class AppComponent {
       priority:1
     }
   ]
+
+  // function AddTodo
+  addTodo(newTodo:Todo){
+    this.todos.push(newTodo);
+  }
+
 }

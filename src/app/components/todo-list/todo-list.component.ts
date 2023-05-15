@@ -8,6 +8,11 @@ import { Todo } from 'src/app/models/todo';
 })
 export class TodoListComponent {
 
-  @Input() todoArray?: Todo[] = []      //default, questa proprieta puo essere riempita tramite l' HTML (input)
+  @Input() todoArray?: Todo[] = [];      //default, questa proprieta puo essere riempita tramite l' HTML (input)
+
+  deleteTodo(todoToDelete: Todo){
+    console.log('Devo cancellare',todoToDelete.title);
+    this.todoArray= this.todoArray?.filter(t => t.title !== todoToDelete.title); // La Filter() dice cosa tenere; tieni tutti i todo che sono diversi dal TODO.title che è arrivato
+  }
 
 }

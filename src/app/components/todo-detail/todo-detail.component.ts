@@ -12,6 +12,6 @@ export class TodoDetailComponent {
     @Output() todoDeleted: EventEmitter<Todo> = new EventEmitter() //DELETE
 
     deleteTodo(){
-      this.todoDeleted.emit(this.todoDetail)
+      this.todoDeleted.emit(this.todoDetail);
     }
 }
